@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import '../styles/Home.css'
 import shopImage from '../images/carpenter.jpg';
+import img1 from '../images/img1.jpg';
+import img2 from '../images/img2.jpg';
+import img3 from '../images/img3.jpg';
+import img4 from '../images/img4.jpg';
+import img5 from '../images/img5.png';
 
 const Home = () => {
+
+    const allImages = [img1, img2, img3, img4, img5];
+    const [startIndex, setStartIndex] = useState(0);
+
     const backgroundStyle = {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${shopImage})`,
         backgroundSize: 'cover',
@@ -32,7 +42,7 @@ const Home = () => {
         fontSize: '1.5rem',
         position: 'relative',
         display: 'inline-block',
-        marginBottom: '25rem'
+        marginBottom: '18rem'
     };
 
     const underlineStyle = {
@@ -42,8 +52,21 @@ const Home = () => {
         backgroundColor: 'white',
         width: '80rem',
         left: '50%',
-        bottom: '0',
+        bottom: '-0.2rem',
         marginLeft: '-40rem'
+    };
+
+    const [offset, setOffset] = useState(0);
+
+    const scroll = (direction) => {
+        let width = 220; // width of image + margin (200px width + 2*10px margin)
+        if (direction === 'right' && startIndex < allImages.length - 4) {
+            setOffset(offset - width);
+            setStartIndex(startIndex + 1);
+        } else if (direction === 'left' && startIndex > 0) {
+            setOffset(offset + width);
+            setStartIndex(startIndex - 1);
+        }
     };
 
     return (
@@ -54,9 +77,18 @@ const Home = () => {
                     <span style={underlineStyle}></span>
                 </h1>
                 <p style={pStyle}>
-                    Your vision, our creation.
+                    By Jeff Barden
                     <span style={underlineStyle}></span>
                 </p>
+
+                <div id="imageContainer" className="image-container">
+                    {allImages.slice(startIndex, startIndex + 4).map((img, index) => (
+                        <img src={img} className="carousel-image" alt={`Wood design ${index + 1}`} key={index} />
+                    ))}
+                </div>
+
+                <button onClick={() => scroll('left')}>Previous</button>
+                <button onClick={() => scroll('right')}>Next</button>
             </div>
         </div>
     );

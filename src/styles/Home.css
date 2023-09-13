@@ -1,0 +1,13 @@
+.image-container {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+}
+
+.carousel-image {
+  width: 200px;
+  height: 200px; /* Or whatever height you desire */
+  object-fit: cover; /* Will crop the image to fill the box */
+  margin: 0 10px;
+}
