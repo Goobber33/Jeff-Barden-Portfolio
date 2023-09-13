@@ -1,0 +1,37 @@
+.text-underlined h1,
+.text-underlined p {
+  position: relative;
+  display: inline-block;
+}
+
+.text-underlined h1::before,
+.text-underlined h1::after,
+.text-underlined p::before,
+.text-underlined p::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: white;
+  width: 50px;
+}
+
+.text-underlined h1::before,
+.text-underlined p::before {
+  left: -60px;
+  bottom: 0;
+}
+
+.text-underlined h1::after,
+.text-underlined p::after {
+  right: -60px;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .text-underlined h1::before,
+  .text-underlined h1::after,
+  .text-underlined p::before,
+  .text-underlined p::after {
+    width: 30px;
+  }
+}

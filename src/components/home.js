@@ -1,5 +1,5 @@
 import React from 'react';
-import shopImage from '../images/carpenter.jpg'; // Adjust the relative path as needed
+import shopImage from '../images/carpenter.jpg';
 
 const Home = () => {
     const backgroundStyle = {
@@ -16,24 +16,47 @@ const Home = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100%', // This will be relative to parent div height
+        height: '100%',
         textAlign: 'center',
         color: 'white'
     };
 
     const h1Style = {
-        fontSize: '4rem', // Adjust the value as needed
+        fontSize: '4rem',
+        position: 'relative',
+        display: 'inline-block',
+        marginBottom: '2rem'
     };
 
     const pStyle = {
-        fontSize: '1.5rem', // Adjust the value as needed
+        fontSize: '1.5rem',
+        position: 'relative',
+        display: 'inline-block',
+        marginBottom: '25rem'
+    };
+
+    const underlineStyle = {
+        content: '""',
+        position: 'absolute',
+        height: '2px',
+        backgroundColor: 'white',
+        width: '80rem',
+        left: '50%',
+        bottom: '0',
+        marginLeft: '-40rem'
     };
 
     return (
         <div style={backgroundStyle} className="d-flex justify-content-center align-items-center">
-            <div style={centerTextStyle} className="text-white">
-                <h1 style={h1Style}>New Wood Design</h1>
-                <p style={pStyle}>Your vision, our creation.</p>
+            <div style={centerTextStyle}>
+                <h1 style={h1Style}>
+                    New Wood Designs
+                    <span style={underlineStyle}></span>
+                </h1>
+                <p style={pStyle}>
+                    Your vision, our creation.
+                    <span style={underlineStyle}></span>
+                </p>
             </div>
         </div>
     );
