@@ -7,7 +7,7 @@
 }
 
 .logo {
-  width: 12rem;
+  width: 8rem;
   height: auto;
 }
 
@@ -29,12 +29,13 @@
 }
 
 .carousel-image {
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
   margin: 0 10px;
   transition: transform 0.3s ease;
   cursor: pointer;
+  border: solid 8px white;
 }
 
 .carousel-image:hover {
@@ -72,4 +73,44 @@
 
 .close-button:hover {
   color: orange;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+}
+
+.image-slider {
+  display: flex;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.arrow-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 3.5rem;
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.arrow-button:hover {
+  color: orange;
+  transform: translateY(-50%) scale(1.25);
+}
+
+
+.arrow-button.left {
+  left: -65px;
+}
+
+.arrow-button.right {
+  right: -65px;
 }

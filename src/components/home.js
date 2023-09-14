@@ -39,7 +39,7 @@ const Home = () => {
     display: 'inline-block',
     marginTop: '8rem',
     marginBottom: '2rem',
-    fontFamily: 'Radley, sans-serif', // Apply the Radley font
+    fontFamily: 'Radley, sans-serif',
   };
 
   const pStyle = {
@@ -61,10 +61,8 @@ const Home = () => {
   };
 
   const showModal = (imageSrc) => {
-    console.log('Modal should open now.');
     setModalImage(imageSrc);
     setIsModalVisible(true);
-    console.log('isModalVisible:', isModalVisible); // Add this line
   };
 
   const scroll = (direction) => {
@@ -78,7 +76,7 @@ const Home = () => {
   return (
     <div style={backgroundStyle} className="d-flex justify-content-center align-items-center">
       <div style={centerTextStyle}>
-        {/* Add the logo div with styles for top-left positioning */}
+        
         <div className="logo-container">
           <div className="logo-tint"></div>
           <img src={logo} alt="Logo" className="logo" />
@@ -88,26 +86,39 @@ const Home = () => {
           New Wood Designs
           <span style={underlineStyle}></span>
         </h1>
+
         <p style={pStyle}>
           By Jeff Barden
           <span style={underlineStyle}></span>
         </p>
 
         <div id="imageContainer" className="image-container">
-          {allImages.slice(startIndex, startIndex + 4).map((img, index) => (
-            <img src={img} className="carousel-image" alt={`Wood design ${index + 1}`} key={index} onClick={() => showModal(img)} />
-          ))}
+
+          <div className="arrow-button left" onClick={() => scroll('left')}>
+            ←  {/* Left Arrow */}
+          </div>
+
+          <div className="image-slider">
+            {allImages.slice(startIndex, startIndex + 4).map((img, index) => (
+              <img src={img} className="carousel-image" alt={`Wood design ${index + 1}`} key={index} onClick={() => showModal(img)} />
+            ))}
+          </div>
+
+          <div className="arrow-button right" onClick={() => scroll('right')}>
+            →  {/* Right Arrow */}
+          </div>
+
         </div>
 
-        <button onClick={() => scroll('left')}>Previous</button>
-        <button onClick={() => scroll('right')}>Next</button>
       </div>
 
       {isModalVisible && (
         <div className="modal">
           <button className="close-button" onClick={() => setIsModalVisible(false)}>X</button>
           <img src={modalImage} alt="Full-Size" />
+
         </div>
+
       )}
 
     </div>
