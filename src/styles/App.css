@@ -27,6 +27,11 @@
   bottom: 0;
 }
 
+h1 {
+  font-family: "Radley", sans-serif;
+  /* Other styles for your h1 element */
+}
+
 @media (max-width: 768px) {
   .text-underlined h1::before,
   .text-underlined h1::after,

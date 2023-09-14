@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import '../styles/Home.css';
+import '../styles/Home.css'
 import shopImage from '../images/carpenter.jpg';
+import logo from '../images/logo.png';
 import img1 from '../images/img1.jpg';
 import img2 from '../images/img2.jpg';
 import img3 from '../images/img3.jpg';
@@ -33,23 +34,25 @@ const Home = () => {
   };
 
   const h1Style = {
-    fontSize: '4rem',
+    fontSize: '7rem',
     position: 'relative',
     display: 'inline-block',
+    marginTop: '8rem',
     marginBottom: '2rem',
+    fontFamily: 'Radley, sans-serif', // Apply the Radley font
   };
 
   const pStyle = {
     fontSize: '1.5rem',
     position: 'relative',
     display: 'inline-block',
-    marginBottom: '18rem',
+    marginBottom: '12rem',
   };
 
   const underlineStyle = {
     content: '""',
     position: 'absolute',
-    height: '2px',
+    height: '1px',
     backgroundColor: 'white',
     width: '80rem',
     left: '50%',
@@ -58,8 +61,10 @@ const Home = () => {
   };
 
   const showModal = (imageSrc) => {
+    console.log('Modal should open now.');
     setModalImage(imageSrc);
     setIsModalVisible(true);
+    console.log('isModalVisible:', isModalVisible); // Add this line
   };
 
   const scroll = (direction) => {
@@ -73,6 +78,12 @@ const Home = () => {
   return (
     <div style={backgroundStyle} className="d-flex justify-content-center align-items-center">
       <div style={centerTextStyle}>
+        {/* Add the logo div with styles for top-left positioning */}
+        <div className="logo-container">
+          <div className="logo-tint"></div>
+          <img src={logo} alt="Logo" className="logo" />
+        </div>
+
         <h1 style={h1Style}>
           New Wood Designs
           <span style={underlineStyle}></span>
@@ -94,10 +105,11 @@ const Home = () => {
 
       {isModalVisible && (
         <div className="modal">
-          <button onClick={() => setIsModalVisible(false)}>Close</button>
+          <button className="close-button" onClick={() => setIsModalVisible(false)}>X</button>
           <img src={modalImage} alt="Full-Size" />
         </div>
       )}
+
     </div>
   );
 };
