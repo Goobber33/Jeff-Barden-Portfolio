@@ -60,15 +60,32 @@
   text-align: center;
 }
 
+.arrow-button.modal-left,
+.arrow-button.modal-right {
+  position: absolute;
+  top: 50%;
+  z-index: 20;
+  font-size: 3.5rem;
+  color: white;
+}
+
+.arrow-button.modal-left {
+  left: 20rem;
+}
+
+.arrow-button.modal-right {
+  right: 20rem;
+}
+
 .close-button {
   background-color: transparent;
   border: none;
   color: white;
-  font-size: 24px;
+  font-size: 2rem;
   cursor: pointer;
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 20px;
 }
 
 .close-button:hover {
@@ -113,4 +130,95 @@
 
 .arrow-button.right {
   right: -65px;
+}
+
+/* 430px Media Queries */
+
+@media screen and (max-width: 430px) {
+  
+  .logo-container {
+    left: 1rem;
+  }
+
+  .logo {
+    width: 6rem;
+  }
+
+  .logo-tint {
+    width: 10rem;
+  }
+
+  h1 {
+    font-size: 2.5rem !important;
+  }
+
+  p {
+    font-size: 1.2rem !important;
+    margin-bottom: 12rem !important;
+  }
+
+  h1 span, p span {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: white;
+    width: 25rem !important;
+    bottom: -0.2rem;
+    margin-left: -12.5rem !important;
+  }
+  
+
+  .carousel-image {
+    width: 75px !important;
+    height: 75px !important;
+    margin: 0 4px;
+    margin-bottom: 10rem !important;
+  }
+
+  .arrow-button, .arrow-button.modal-left, .arrow-button.modal-right {
+    font-size: 1.5rem !important;
+  }
+
+  .close-button {
+    font-size: 1.2rem;
+    right: 10px;
+  }
+
+  .arrow-button.modal-left,
+  .arrow-button.modal-right {
+    font-size: 2.5rem;
+  }
+
+  .arrow-button.modal-left {
+    left: 10rem;
+  }
+
+  .arrow-button.modal-right {
+    right: 10rem;
+  }
+
+  .close-button {
+    font-size: 1.5rem;
+    right: 10px;
+  }
+
+  .arrow-button {
+    font-size: 2.5rem;
+  }
+
+  .arrow-button.left {
+    left: -2rem;
+    bottom: -4.8rem;
+  }
+
+  .arrow-button.right {
+    right: -2rem;
+    bottom: -4.8rem;
+  }
+
+  .modal img {
+    width: 70%;
+    height: auto;
+  }
+  
 }

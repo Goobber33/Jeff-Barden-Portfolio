@@ -13,6 +13,7 @@ const Home = () => {
   const [startIndex, setStartIndex] = useState(0);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [modalImage, setModalImage] = useState(null);
+  const [modalIndex, setModalIndex] = useState(0);
 
   const backgroundStyle = {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${shopImage})`,
@@ -37,7 +38,7 @@ const Home = () => {
     fontSize: '7rem',
     position: 'relative',
     display: 'inline-block',
-    marginTop: '8rem',
+    marginTop: '4rem',
     marginBottom: '2rem',
     fontFamily: 'Radley, sans-serif',
   };
@@ -46,7 +47,7 @@ const Home = () => {
     fontSize: '1.5rem',
     position: 'relative',
     display: 'inline-block',
-    marginBottom: '12rem',
+    marginBottom: '14rem',
   };
 
   const underlineStyle = {
@@ -60,8 +61,9 @@ const Home = () => {
     marginLeft: '-40rem',
   };
 
-  const showModal = (imageSrc) => {
+  const showModal = (imageSrc, index) => {
     setModalImage(imageSrc);
+    setModalIndex(index);  // New line
     setIsModalVisible(true);
   };
 
@@ -73,10 +75,21 @@ const Home = () => {
     }
   };
 
+  const scrollModal = (direction) => {
+    let newIndex = modalIndex;
+    if (direction === 'right' && modalIndex < allImages.length - 1) {
+      newIndex = modalIndex + 1;
+    } else if (direction === 'left' && modalIndex > 0) {
+      newIndex = modalIndex - 1;
+    }
+    setModalIndex(newIndex);
+    setModalImage(allImages[newIndex]);
+  };
+
   return (
     <div style={backgroundStyle} className="d-flex justify-content-center align-items-center">
       <div style={centerTextStyle}>
-        
+
         <div className="logo-container">
           <div className="logo-tint"></div>
           <img src={logo} alt="Logo" className="logo" />
@@ -100,7 +113,7 @@ const Home = () => {
 
           <div className="image-slider">
             {allImages.slice(startIndex, startIndex + 4).map((img, index) => (
-              <img src={img} className="carousel-image" alt={`Wood design ${index + 1}`} key={index} onClick={() => showModal(img)} />
+              <img src={img} className="carousel-image" alt={`Wood design ${index + 1}`} key={index} onClick={() => showModal(img, index)} />  // Added index
             ))}
           </div>
 
@@ -113,13 +126,20 @@ const Home = () => {
       </div>
 
       {isModalVisible && (
-        <div className="modal">
-          <button className="close-button" onClick={() => setIsModalVisible(false)}>X</button>
-          <img src={modalImage} alt="Full-Size" />
+      <div className="modal">
+        <button className="close-button" onClick={() => setIsModalVisible(false)}>X</button>
 
+        <div className="arrow-button modal-left" onClick={() => scrollModal('left')}>
+          ←  {/* Left Arrow */}
         </div>
 
-      )}
+        <img src={modalImage} alt="Full-Size" />
+
+        <div className="arrow-button modal-right" onClick={() => scrollModal('right')}>
+          →  {/* Right Arrow */}
+        </div>
+      </div>
+    )}
 
     </div>
   );
