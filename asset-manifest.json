@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Jeff-Barden-Portfolio/static/css/main.0058a8f1.css",
+    "main.css": "/Jeff-Barden-Portfolio/static/css/main.415aa264.css",
     "main.js": "/Jeff-Barden-Portfolio/static/js/main.00f44ed9.js",
     "static/js/787.ce03b93d.chunk.js": "/Jeff-Barden-Portfolio/static/js/787.ce03b93d.chunk.js",
     "static/media/carpenter.jpg": "/Jeff-Barden-Portfolio/static/media/carpenter.dd19a0c6c15c35532799.jpg",
@@ -11,12 +11,12 @@
     "static/media/img1.jpg": "/Jeff-Barden-Portfolio/static/media/img1.e59add13a9e5dc042a8a.jpg",
     "static/media/img4.jpg": "/Jeff-Barden-Portfolio/static/media/img4.8f50241d004055f140cd.jpg",
     "index.html": "/Jeff-Barden-Portfolio/index.html",
-    "main.0058a8f1.css.map": "/Jeff-Barden-Portfolio/static/css/main.0058a8f1.css.map",
+    "main.415aa264.css.map": "/Jeff-Barden-Portfolio/static/css/main.415aa264.css.map",
     "main.00f44ed9.js.map": "/Jeff-Barden-Portfolio/static/js/main.00f44ed9.js.map",
     "787.ce03b93d.chunk.js.map": "/Jeff-Barden-Portfolio/static/js/787.ce03b93d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0058a8f1.css",
+    "static/css/main.415aa264.css",
     "static/js/main.00f44ed9.js"
   ]
 }
