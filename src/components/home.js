@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../styles/Home.css'
 import shopImage from '../images/carpenter.jpg';
 import logo from '../images/logo.png';
@@ -14,6 +14,13 @@ const Home = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [modalImage, setModalImage] = useState(null);
   const [modalIndex, setModalIndex] = useState(0);
+  const imageRef = useRef(null);
+
+  const handleModalClick = (e) => {
+    if (imageRef.current && !imageRef.current.contains(e.target)) {
+      setIsModalVisible(false);
+    }
+  };
 
   const backgroundStyle = {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${shopImage})`,
@@ -62,10 +69,16 @@ const Home = () => {
   };
 
   const showModal = (imageSrc, index) => {
+    console.log("Opening modal with image:", imageSrc, " and index:", index);
     setModalImage(imageSrc);
-    setModalIndex(index);  // New line
+    setModalIndex(index);
     setIsModalVisible(true);
+    console.log("Is Modal Visible:", isModalVisible);  // Debugging line
   };
+
+  useEffect(() => {
+    console.log("Is Modal Visible has changed:", isModalVisible);
+  }, [isModalVisible]);
 
   const scroll = (direction) => {
     if (direction === 'right' && startIndex < allImages.length - 4) {
@@ -126,21 +139,15 @@ const Home = () => {
       </div>
 
       {isModalVisible && (
-      <div className="modal">
-        <button className="close-button" onClick={() => setIsModalVisible(false)}>X</button>
-
-        <div className="arrow-button modal-left" onClick={() => scrollModal('left')}>
-          ←  {/* Left Arrow */}
+        <div className="modal-bg" onClick={handleModalClick}>
+          <div className="close-button-wrapper">
+            <button className="btn btn-danger" onClick={() => setIsModalVisible(false)}>X</button>
+          </div>
+          <button className="btn btn-light modal-arrow modal-arrow-left" onClick={(e) => { e.stopPropagation(); scrollModal('left'); }}>←</button>
+          <img ref={imageRef} src={modalImage} alt="Full-Size" className="modal-img" />
+          <button className="btn btn-light modal-arrow modal-arrow-right" onClick={(e) => { e.stopPropagation(); scrollModal('right'); }}>→</button>
         </div>
-
-        <img src={modalImage} alt="Full-Size" />
-
-        <div className="arrow-button modal-right" onClick={() => scrollModal('right')}>
-          →  {/* Right Arrow */}
-        </div>
-      </div>
-    )}
-
+      )}
     </div>
   );
 };
