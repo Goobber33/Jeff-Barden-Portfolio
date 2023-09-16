@@ -11,7 +11,7 @@
   flex: 1;  
   display: flex;
   flex-direction: column;
-  padding-left: 14rem;
+  padding-left: 25rem;
 }
 
 .contact-info-group {
@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;  /* Left align */
-  margin-left: 30rem;  /* Add this line */
+
 }
 
 .contact-info-title {
@@ -105,4 +105,103 @@
 .btn1 span, svg {
   position: relative;
   z-index: 2;
+}
+
+/* ---------- 430px Media Queries ---------- */
+
+@media screen and (max-width: 430px) {
+
+  .contact-section {
+    flex-direction: column;
+  }
+
+  .contact-text-group, .contact-info-group {
+    padding-left: 1rem;
+    margin-left: 0;  /* Reset the left margin */
+  }
+
+    /* Add these lines */
+    .contact-text-group {
+      order: 1;
+    }
+    
+    .contact-info-group {
+      order: 2;
+    }
+
+    .copyright-text {
+      order: 3;
+      margin-bottom: -1rem !important;
+    }
+
+  .contact-text-group {
+    padding-left: 1rem;
+  }
+
+  .contact-text-group h1 {
+    font-size: 2.7rem !important;
+    width: 100% !important;
+  }
+
+  .contact-text-group p {
+    font-size: 1rem !important;
+    width: 90% !important;
+  }
+  
+  .contact-info-group {
+    padding: 1rem;
+  }
+  
+  .contact-info-title {
+    font-size: 1.4rem !important;
+    margin-top: 8rem;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* Left align */
+    text-align: left;  /* Text left-aligned */
+  }
+
+  .contact-info p {
+    margin-top: -10rem;
+  }
+  
+  .contact-text {
+    margin-bottom: 5px !important;
+    width: 70%;
+  }
+  
+  .contact-info a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .copyright-text {
+    text-align: right;
+    align-self: flex-end; 
+    margin-left: -22rem !important;
+  }
+  
+  .btn1 {
+    background: transparent;
+    position: relative;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgb(255,0,0);
+    border-radius: 25px;
+    outline: none;
+    overflow: hidden;
+    color: rgb(255,0,0);
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+    margin-top: -8rem;
+  }
+
 }
