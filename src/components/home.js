@@ -144,7 +144,7 @@ const Home = () => {
             <button className="btn btn-danger" onClick={() => setIsModalVisible(false)}>X</button>
           </div>
           <button className="btn btn-light modal-arrow modal-arrow-left" onClick={(e) => { e.stopPropagation(); scrollModal('left'); }}>←</button>
-          <img ref={imageRef} src={modalImage} alt="Full-Size" className="modal-img" />
+          <img ref={imageRef} src={modalImage} alt="Full-Size" style={{ maxWidth: "80%", maxHeight: "80vh" }} className="modal-img" />
           <button className="btn btn-light modal-arrow modal-arrow-right" onClick={(e) => { e.stopPropagation(); scrollModal('right'); }}>→</button>
         </div>
       )}
