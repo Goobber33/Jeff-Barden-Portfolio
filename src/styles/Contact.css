@@ -107,6 +107,14 @@
   z-index: 2;
 }
 
+@media screen and (max-width: 1366px) {
+
+  .contact-text-group {
+    padding-left: 17rem;
+  }
+
+}
+
 /* ---------- 430px Media Queries ---------- */
 
 @media screen and (max-width: 430px) {

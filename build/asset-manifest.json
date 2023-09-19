@@ -1,22 +1,27 @@
 {
   "files": {
     "main.css": "/Jeff-Barden-Portfolio/static/css/main.7181bb7c.css",
-    "main.js": "/Jeff-Barden-Portfolio/static/js/main.3c26150f.js",
+    "main.js": "/Jeff-Barden-Portfolio/static/js/main.62b76262.js",
     "static/js/787.ce03b93d.chunk.js": "/Jeff-Barden-Portfolio/static/js/787.ce03b93d.chunk.js",
+    "static/media/img6.jpg": "/Jeff-Barden-Portfolio/static/media/img6.2d9f0b7f543079079b9e.jpg",
     "static/media/carpenter.jpg": "/Jeff-Barden-Portfolio/static/media/carpenter.dd19a0c6c15c35532799.jpg",
-    "static/media/img5.png": "/Jeff-Barden-Portfolio/static/media/img5.d41dfca7ef1f4c40f10e.png",
+    "static/media/img3.jpg": "/Jeff-Barden-Portfolio/static/media/img3.e1d1b60565dc4b647bab.jpg",
+    "static/media/img2.JPG": "/Jeff-Barden-Portfolio/static/media/img2.2c60a2c63678e6ec129d.JPG",
+    "static/media/img1.JPG": "/Jeff-Barden-Portfolio/static/media/img1.33e4420be954c616965f.JPG",
+    "static/media/img8.jpg": "/Jeff-Barden-Portfolio/static/media/img8.2ac5cf05516670608747.jpg",
+    "static/media/img5.jpg": "/Jeff-Barden-Portfolio/static/media/img5.c1fb45378414b31b308a.jpg",
+    "static/media/img9.jpg": "/Jeff-Barden-Portfolio/static/media/img9.4068c7733cff83eef692.jpg",
+    "static/media/img7.jpg": "/Jeff-Barden-Portfolio/static/media/img7.ef537cd50ea1866afc53.jpg",
+    "static/media/img10.jpg": "/Jeff-Barden-Portfolio/static/media/img10.40294a15e51c91528444.jpg",
+    "static/media/img4.jpg": "/Jeff-Barden-Portfolio/static/media/img4.c1ce5ce032d13f07fa81.jpg",
     "static/media/logo.png": "/Jeff-Barden-Portfolio/static/media/logo.26eda7c199435d566536.png",
-    "static/media/img2.jpg": "/Jeff-Barden-Portfolio/static/media/img2.56322a521e6d5437371a.jpg",
-    "static/media/img3.jpg": "/Jeff-Barden-Portfolio/static/media/img3.f751efb775e4846cec47.jpg",
-    "static/media/img1.jpg": "/Jeff-Barden-Portfolio/static/media/img1.e59add13a9e5dc042a8a.jpg",
-    "static/media/img4.jpg": "/Jeff-Barden-Portfolio/static/media/img4.8f50241d004055f140cd.jpg",
     "index.html": "/Jeff-Barden-Portfolio/index.html",
     "main.7181bb7c.css.map": "/Jeff-Barden-Portfolio/static/css/main.7181bb7c.css.map",
-    "main.3c26150f.js.map": "/Jeff-Barden-Portfolio/static/js/main.3c26150f.js.map",
+    "main.62b76262.js.map": "/Jeff-Barden-Portfolio/static/js/main.62b76262.js.map",
     "787.ce03b93d.chunk.js.map": "/Jeff-Barden-Portfolio/static/js/787.ce03b93d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7181bb7c.css",
-    "static/js/main.3c26150f.js"
+    "static/js/main.62b76262.js"
   ]
 }
