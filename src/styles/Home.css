@@ -136,6 +136,139 @@
     right: 2.3rem;
     top: 30rem;
   }
+}
+
+@media screen and (max-width: 1024px) {
+
+  h1 span, p span {
+    width: 60rem !important;
+    margin-left: -30rem !important;
+  }
+
+  .carousel-image {
+    width: 13rem;
+    height: 13rem;
+    margin: 0 4px;
+    margin-bottom: 13rem !important;
+  }
+
+  .arrow-button.left {
+    left: -4rem;
+    bottom: -6rem;
+  }
+
+  .arrow-button.right {
+    right: -4rem;
+    bottom: -6rem;
+  }
+  
+}
+
+@media screen and (max-width: 814px) {
+
+  .logo-container {
+    left: 1rem;
+  }
+
+  .logo {
+    width: 4rem;
+  }
+
+  h1 {
+    font-size: 3rem !important;
+    top: 5rem;
+  }
+
+  p {
+    font-size: 1.2rem !important;
+    margin-bottom: 10rem !important;
+    top: 5rem;
+  }
+
+  h1 span, p span {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: white;
+    width: 40rem !important;
+    bottom: -0.2rem;
+    margin-left: -21rem !important;
+  }
+  
+  .carousel-image {
+    width: 100px !important;
+    height: 100px !important;
+    margin: 0 4px;
+    margin-bottom: 13rem !important;
+  }
+
+  .arrow-button {
+    font-size: 2.5rem;
+  }
+
+  .arrow-button.left {
+    left: -2.5rem;
+    bottom: -7.5rem;
+  }
+
+  .arrow-button.right {
+    right: -2.5rem;
+    bottom: -7.5rem;
+  }
+
+  .arrow-button:hover {
+    transform: translateY(-50%); 
+  }
+
+  .modal img {
+    width: 70%;
+    height: auto;
+  }
+
+  .modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal-img {
+    max-width: 97% !important;
+    max-height: 80vh;
+    margin-bottom: 3rem;
+  }
+  
+  .close-button-wrapper {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    z-index: 1;
+  }
+  
+  .modal-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  
+  .modal-arrow-left {
+    font-size: 1rem !important;
+    left: 5rem;
+    top: 12rem !important;
+  }
+  
+  .modal-arrow-right {
+    font-size: 1rem !important;
+    right: 5rem;
+    top: 12rem;
+  }
 
 }
 
@@ -236,13 +369,13 @@
   .modal-arrow-left {
     font-size: 1rem !important;
     left: 5rem;
-    top: 39rem;
+    top: 44rem !important;
   }
   
   .modal-arrow-right {
     font-size: 1rem !important;
     right: 5rem;
-    top: 39rem;
+    top: 44rem;
   }
 
 }

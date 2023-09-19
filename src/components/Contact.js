@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <div className="contact-section">
       <div className="contact-text-group">
-        <h1 style={h1Style}>New Wood Designs</h1>
+        <h1 className="h1t" style={h1Style}>New Wood Designs</h1>
         <p className="contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan turpis. Sed vel ante sit amet libero scelerisque facilisis. Duis non elementum quam, id temp
         </p>
         <p className="contact-text">Lorem ipsum...</p>
