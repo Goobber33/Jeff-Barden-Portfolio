@@ -414,3 +414,47 @@
   }
 
 }
+
+@media screen and (max-width: 375px) {
+
+  h1 span, p span {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: white;
+    width: 22rem !important;
+    bottom: -0.2rem;
+    margin-left: -11rem !important;
+  }
+
+  .logo {
+    width: 4rem;
+  }
+
+  .carousel-image {
+    width: 70px !important;
+    height: 70px !important;
+    margin: 0 4px;
+    margin-bottom: 10rem !important;
+  }
+
+  .modal-arrow-left {
+    font-size: 1rem !important;
+    left: 5rem;
+    top: 38rem !important;
+  }
+  
+  .modal-arrow-right {
+    font-size: 1rem !important;
+    right: 5rem;
+    top: 38rem;
+  }
+
+  .close-button-wrapper {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 1;
+  }
+
+}

@@ -348,3 +348,13 @@
   }
 
 }
+
+@media screen and (max-width: 375px) {
+
+  .contact-info-title {
+    font-size: 1.1rem !important;
+    margin-top: 8rem;
+    margin-left: -0.2rem;
+  }
+
+}
