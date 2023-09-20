@@ -1,4 +1,4 @@
-# [Client's Name] Portfolio
+# Jeff Barden Portfolio
 
 ## Overview
 
