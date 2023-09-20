@@ -59,6 +59,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Acknowledgements
 
-- [Client's Name] for entrusting me with this project
-- [Any third-party resources or libraries used]
-- [Any other acknowledgements]
+- Jeff Barden for entrusting me with this project
